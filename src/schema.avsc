@@ -1,0 +1,26 @@
+{
+  "namespace": "example.avro",
+  "type": "record",
+  "name": "User",
+  "fields": [
+    { "name": "name", "type": "string" },
+    { "name": "age", "type": "int" },
+    {
+      "name": "employer",
+      "type": {
+        "type": "record",
+        "name": "Employer",
+        "fields": [
+          { "name": "company_name", "type": "string" },
+          { "name": "job_title", "type": "string" }
+        ]
+      }
+    },
+    {
+      "name": "start_date",
+      "type": { "type": "long", "logicalType": "timestamp-millis" }
+    },
+    { "name": "skills", "type": { "type": "array", "items": "string" } },
+    { "name": "metadata", "type": { "type": "map", "values": "string" } }
+  ]
+}

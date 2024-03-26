@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "kafka-ex"
+version = "0.1.0"
+description = "A simple Kafka consumer and producer"
+authors = ["Elyes <elyes.mahjoubi@gartner.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = { version = "^0.110.0", extras = ["all"] }
+kafka-python = "^2.0.2"
+pyyaml = "^6.0.1"
+faker = "^23.3.0"
+python-dotenv = "^0.21.0"
+flask = "^3.0.2"
+avro = "^1.11.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+pytest-cov = "^3.0.0"
+flake8 = "^4.0.1"
+black = "^21.12b0"
+
+[tool.black]
+line_length = 100
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

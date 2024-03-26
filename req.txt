@@ -1,6 +1,0 @@
-kafka-python
-fastapi[all]
-python-dotenv
-flake8
-black
-pylint
